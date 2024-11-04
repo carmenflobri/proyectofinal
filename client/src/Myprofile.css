@@ -1,0 +1,134 @@
+/* Myprofile.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #F2E41B, #F2D64B); /* Fondo degradado */
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: 100vh;
+}
+
+h2 {
+    color: #F20775; /* Color rosa vibrante para el título */
+    margin-bottom: 20px;
+}
+
+.articles-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Diseño de cuadrícula */
+    gap: 20px; /* Espaciado entre los artículos */
+    width: 100%;
+    max-width: 1200px; /* Máxima anchura del contenedor */
+    margin-bottom: 20px;
+}
+
+.article-card {
+    background-color: #ffffff; /* Fondo blanco para cada artículo */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: transform 0.2s; /* Transición suave para el efecto de elevación */
+}
+
+.article-card:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+}
+
+.article-title {
+    color: #F20775; /* Color rosa para el título del artículo */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.article-author {
+    color: #333;
+    font-weight: bold;
+}
+
+.article-content {
+    color: #555;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: space-between; /* Espaciado entre los botones */
+    margin-top: 10px;
+}
+
+button, .logout-button {
+    background-color: #F27C38; /* Color de fondo naranja para los botones */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover, .logout-button {
+    background-color: #F25F29; /* Naranja más oscuro al pasar el mouse */
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro y semitransparente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Z-index alto para el modal */
+}
+
+.modal h3 {
+    color: #F20775; /* Color rosa vibrante para el título del modal */
+}
+
+.modal input, .modal textarea {
+    width: 80%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 2px solid #F25F29; /* Borde naranja */
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.modal input:focus, .modal textarea:focus {
+    border-color: #F2E41B; /* Borde amarillo al enfocar */
+    outline: none;
+}
+
+.modal button {
+    margin-top: 10px;
+    background-color: #F27C38; /* Color de fondo para botones en el modal */
+}
+
+.modal button:hover {
+    background-color: #F25F29; /* Naranja más oscuro al pasar el mouse */
+}
+
+.link {
+    margin-top: 20px;
+    text-decoration: none;
+    color: #F20775; /* Color rosa para el enlace */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.link:hover {
+    color: #F25F29; /* Cambiar color al pasar el mouse */
+}
+.create{
+    color: #ffffff;
+    text-decoration: none;
+}

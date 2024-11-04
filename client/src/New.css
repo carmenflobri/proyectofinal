@@ -1,0 +1,79 @@
+/* New.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #F2E41B, #F2D64B); /* Fondo degradado */
+}
+
+.new-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.new-form {
+    background-color: #ffffff; /* Fondo blanco para el formulario */
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Sombra */
+    width: 100%;
+    max-width: 500px; /* Máxima anchura del formulario */
+    text-align: center; /* Centrar texto */
+}
+
+.new-title {
+    margin-bottom: 1.5rem;
+    color: #F20775; /* Color rosa vibrante */
+    font-size: 2rem; /* Tamaño del título */
+    font-weight: bold; /* Negrita */
+}
+
+.form-input, .form-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 2px solid #F25F29; /* Borde naranja */
+    border-radius: 8px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-input:focus, .form-textarea:focus {
+    border-color: #F2E41B; /* Borde amarillo al enfocar */
+    box-shadow: 0 0 5px rgba(242, 227, 26, 0.5); /* Sombra amarilla */
+    outline: none;
+}
+
+.btn-save {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    background-color: #F27C38; /* Color de fondo naranja */
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold; /* Negrita */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-save:hover {
+    background-color: #F25F29; /* Naranja más oscuro al pasar el mouse */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+.link {
+    display: block;
+    margin-top: 1rem;
+    color: #333; /* Color del texto del enlace */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.link:hover {
+    color: #F20775; /* Cambiar color al pasar el mouse */
+}

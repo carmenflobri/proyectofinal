@@ -1,0 +1,93 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #F2E41B, #F2D64B); /* Fondo degradado usando la paleta */
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-box {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center; /* Centrar texto */
+}
+
+.login-title {
+    margin-bottom: 1.5rem;
+    color: #F20775; /* Color rosa vibrante */
+    font-size: 1.8rem; /* Tamaño del título */
+    font-weight: bold; /* Negrita */
+    text-shadow: 1px 1px 2px rgba(242, 7, 116, 0.5); /* Sombra del texto */
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 2px solid #F25F29; /* Borde naranja */
+    border-radius: 8px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-input:focus {
+    border-color: #F2E41B; /* Borde amarillo al enfocar */
+    box-shadow: 0 0 5px rgba(242, 227, 26, 0.5); /* Sombra amarilla */
+    outline: none;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 0.7rem;
+    border: none;
+    background-color: #F27C38; /* Color de fondo naranja */
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold; /* Negrita */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #F25F29; /* Naranja más oscuro al pasar el mouse */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+.register-text {
+    margin: 1rem 0;
+    color: #333;
+}
+
+.btn-register {
+    display: block;
+    width: 100%;
+    padding: 0.7rem;
+    background-color: #F2D64B; /* Color de fondo amarillo */
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-register:hover {
+    background-color: #F20775; /* Rosa más oscuro al pasar el mouse */
+    transform: translateY(-2px); /* Efecto de elevación */
+}

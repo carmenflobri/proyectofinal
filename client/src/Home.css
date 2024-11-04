@@ -1,0 +1,61 @@
+/* Home.css */
+
+:root {
+    --color-primary: #F20775; /* Rosa vibrante */
+    --color-secondary: #F25F29; /* Naranja */
+    --color-background: #F2E41B; /* Fondo amarillo */
+    --color-text: #333; /* Texto oscuro */
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra para botones */
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, var(--color-background), #F2D64B);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-container {
+    text-align: center;
+    max-width: 600px;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.home-title {
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Espaciado entre botones */
+}
+
+.btn {
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.btn-main {
+    background-color: var(--color-secondary);
+}
+
+.btn-main:hover {
+    background-color: var(--color-primary); /* Cambia a rosa en hover */
+    transform: translateY(-2px); /* Efecto de elevación en hover */
+}
