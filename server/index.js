@@ -9,6 +9,12 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+// Middleware para configurar la Content Security Policy
+app.use((req, res, next) => {
+    res.setHeader("Content-Security-Policy", "default-src 'self'; script-src 'self' https://vercel.live; style-src 'self' 'unsafe-inline';");
+    next();
+});
+
 // Conectar a MongoDB solo una vez para ambas colecciones
 mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
@@ -78,11 +84,10 @@ app.put('/articles/update/:id', async (req, res) => {
         const { id } = req.params;
         const { title, content, author } = req.body;
 
-        // Asegúrate de que estás usando el modelo correcto
         const updatedArticle = await ArticleModel.findByIdAndUpdate(
             id,
             { title, content, author },
-            { new: true } // Esta opción asegura que devuelve el documento actualizado
+            { new: true }
         );
         
         if (updatedArticle) {
@@ -94,8 +99,6 @@ app.put('/articles/update/:id', async (req, res) => {
         res.status(500).json({ message: "Error al actualizar el artículo", error });
     }
 });
-
-
 
 app.delete('/articles/delete/:id', async (req, res) => {
     try {

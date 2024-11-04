@@ -9,15 +9,18 @@ function Login() {
     const [password, setPassword] = useState();
     const navigate = useNavigate();
     
+    // Define la URL de la API usando la variable de entorno
+    const API_URL = import.meta.env.VITE_API_URL;
+
     const handleSumit = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:3006/login', { email, password })
+        // Utiliza API_URL en lugar de la URL hardcoded
+        axios.post(`${API_URL}/login`, { email, password })
             .then(result => {
                 console.log(result);
                 if (result.data === "Success") {
                     navigate('/home');
                 }
-                navigate('/home');
             })
             .catch(err => console.log(err));
     };
